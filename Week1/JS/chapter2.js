@@ -6,8 +6,8 @@ typeof [1,2] //object
 typeof {key:'value'} //object
 typeof x //undefined -primitive
 
-let score = 0 //mutable
-score = 5
+//let score = 0 //mutable
+//score = 5
 
 /* Practice in Class Day 4 */
 // 1. non-primitive data types can mutate
@@ -81,16 +81,55 @@ console.log(peopleList[0]) // output: "Arnold"
 
 // global versus local
 
-let b = 2;
 
-{ b = 4; b; }
 
-{c = 3, c;}
+{a1 = 3; a1;} // create a global assignment from block
+a1 // value is accessible outside the block
+a1 = 4; //4 value is overwritten
 
-const c = 1;
-b = c; b = 2
+a2 = 3 // global scope outside the block
+{a2 = 4; a2;} //value is accessible inside the block
+a2; //4 - value is overwritten
+
+
+{let b1 = 3; b1;} // create a local mutable assignment only
+b1;  // b1 is not defined globally
+b1=4; // no errors but we aare creating a global assignment here, noyt changing value from local scope
+
+let b2 = 2; // create a global mutable assignment
+{ b2 = 4; b2; } // global b2 is accessible in inside block. It is mutable.
+b2; //4 - value is overwritten from block
+
+
+let b3 = 2; // create a global mutable assignment
+{ let b3 = 4; b3; } // creating a local assignment
+b3; //2 - local scope did not overwrite the global
+
+const c1 = 3; // create a global immutable assignment
+{const c1=2;c1;} // create a local immutable
+c1; // local scope did not overwrite global assignment
+
+
+const c2 = 3; // create a global immutable assignment
+{c2=2;c2;} // typeerror (cannot change)
+let test = {c2}; // accessible
+test.c2; //3
+test={c2:2}; //2 - you can change value in object (it is not a primitive)
+test.c2; //2 - accessing value in object
+c2; //3 - the global value is not changed
+
+
+const c3 = 1;
+c4 = c3; c4 = 2; // 2 - c4 only refers to c3
+c3; //1 - the value is not overwritten
+
+let c5 = c3; c5 = 2; // c5 only refers to c3
+c3 // 1 - the value is not changed
 
 const z = { value: 1 };
-let d = z; // c.value = 1, d.value = 1
-d.value = 2; // c.value = 2, d.value = 2
-https://techstacker.com/what-does-it-mean-that-primitive-values-are-immutuable-in-javascript/
+z.value;
+let c6 = z; // c6.value = 1, z.value = 1
+c6.value = 2; // c6.value = 2, z.value = 2
+z.value; //value is mutable (it is not a primitive data type, it is object)
+typeof(z)
+//https://techstacker.com/what-does-it-mean-that-primitive-values-are-immutuable-in-javascript/
