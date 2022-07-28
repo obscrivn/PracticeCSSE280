@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Divs and Spans</title>
+        <style>
+            .bluebox {
+                background-color:blue;
+                color:white;
+                height:100px;
+                width:100px;
+                padding:10px;
+                /* border: 10px ridge #cd4c32; */
+                border-width: 10px;
+                border-color: black yellow red green;
+                border-style: ridge;
+                border-radius: 80px;
+                margin:20px;
+                
+            }
+            .greenbox {
+                /*background-color:green;*/
+                /* background: rgba(0, 128, 0, 0.3); /* Green background with 30% opacity */ 
+                background:#32CD32 /*limegreen*/ ;
+                color: white;
+                height:100px;
+                width:auto;
+                padding:40px 70px;
+                border: 5px groove rgb(180, 8, 154);
+                margin:30px;
+                background-image: url(images/ocean.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-origin: content-box;
+                outline-style: double; 
+                outline-color: rgb(226, 51, 7);
+                outline-width:thick;
+            }
+            .yellowbox {
+                background-color:yellow;
+                color:black;
+                height:auto;
+                width:auto;
+                padding:10px 20px 10px 30px;
+                border: 30px dotted #111011;
+                margin: 10px;
+            }
+            .great {
+                font-size:300%;
+            }
+            p {
+                margin:0;
+                background-color:rgba(136, 52, 52, 0.627);
+                }
+                
+        </style>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Facebook</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple is <span class="great">great</span></p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft</p>
+        </div>
+            
+        
+    </body>
+</html>
