@@ -1,0 +1,21 @@
+body {
+background: rgb(240, 212, 241)
+}
+
+.buttons-group {
+text-align: center;
+padding:10px;
+}
+
+button {
+    margin:10px;
+    color:white;
+    font-size:medium;
+    background-color:black;
+    width: 25%;
+    height:30px
+}
+#counter {
+font-size:5em;
+text-align:center;
+}

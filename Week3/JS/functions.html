@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>functions</title>
+    </head>
+    <body>
+        <button id="btn">Click here</button>
+        <p> JS functions are executed in the sequence they are called </p>
+        <p id="demo"></p>
+        <script> 
+        // Callback
+        const message = function() {
+            console.log("User clicked the button");
+        }
+        
+        //document.querySelector("#btn")
+        //.addEventListener('click', message);
+
+
+       // document.querySelector("#btn")
+       // .addEventListener('click', function() {
+       //     console.log("User clicked the button");
+       // })
+
+
+       document.querySelector("#btn")
+       .addEventListener('click',() => console.log("User clicked on the button"));
+
+
+       function dance() {
+        console.log("I like dancing");
+        }
+        function sing(name, callback) {
+        console.log(`I sing along to ${name}`);
+        callback();
+        }
+        
+        function display(text){
+            document.getElementById("demo").innerHTML = text;
+        }
+        function first() {
+            display("Hello");
+        }
+        function second() {
+            display("Goodbye");
+        }
+        //first();
+        second();
+        first();
+        //display("My paragraph");
+
+            // Hoisting Ex1
+            //foo();
+            //function foo() {
+             // alert("Hello!");}
+
+             //const foo = function() {
+             //  alert("Hello!");
+             //   };
+             // Hoisting Ex2
+        //helloDeclaration();
+       // helloExpression();
+        
+       // const helloExpression = function() {
+          //  console.log('Hello Expression');
+       // };
+        // function helloDeclaration() {
+        //    console.log('Hello Declaration');
+       // } 
+        </script>
+    </body>
+    </html>
