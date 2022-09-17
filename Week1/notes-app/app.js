@@ -1,6 +1,14 @@
+
 const fs = require('fs');
 
-//fs.writeFileSync('notes.txt', 'This file is created by Node');
+
+
+
+
+
+//import { writeFileSync, appendFileSync } from 'fs';
+
+fs.writeFileSync('notes.txt', 'This file is created by Node');
 
 
 
@@ -10,6 +18,6 @@ const fs = require('fs');
 // Challenge Practice 2
 
 
-fs.writeFileSync('notes.txt', 'This file is created by Node. ');
-fs.appendFileSync('notes.txt', 'Appending a new message.' )
+//writeFileSync('notes.txt', 'This file is created by Node. ');
+//appendFileSync('notes.txt', 'Appending a new message.' )
 

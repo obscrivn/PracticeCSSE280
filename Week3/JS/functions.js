@@ -79,4 +79,53 @@ hello = () => 'Hello';
 // hoisting and callback (see functions.html)
 
 // sorting array
-[1,2,5,2].sort()
+
+['a','f','d','c'].sort()
+[1,2,5,4,3].sort()
+[1,3,12,5,23,18,7].sort()
+
+function numbers(a,b) {
+return a-b
+}
+
+[1,3,12,5,23,18,7].sort(numbers)
+
+/// Array Itirators with Callback
+//1. forEach
+const colors = ['red','blue','green'];
+for (let i=0,max = colors.length; i<max; i++){
+   console.log(`${colors[i]} at ${i}`);
+}
+
+colors.forEach((color,index)=>{console.log(`${color} ${index}`);})
+
+//map()
+function square(x) {
+    return x*x;
+}
+[1,2,5].map(square) // function declaraation
+[1,2,5].map((x) => x*x)
+
+['red','blue','green'].map(color => `<p>${color.toUpperCase()}</p>`)
+
+
+// reduce()
+
+[1,2,3,4,5].reduce( (acc,val) => {
+    console.log(acc)
+    console.log(val)
+    console.log(acc + val)
+    console.log('done')
+    //console.log(prev)
+    return acc + val 
+}
+    )
+
+// filter()
+const number = [1,4,6,7]
+number.filter(x => x%2===0)
+number.filter(x => x%2!=0)
+
+// Chaining together
+
+

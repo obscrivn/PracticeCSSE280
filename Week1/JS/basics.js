@@ -1,5 +1,46 @@
 // Conventions
 
+let x = 5; // comments
+
+/*
+multi-comment
+*/
+console.log('print');
+
+
+let sum = x + 5 ; // in-line comments
+
+/*
+multi-line comments
+*/
+
+function myFunction() {
+    /// do to
+}
+
+if (isCorrect()) {
+    // to do
+}
+
+let sum = x + 3 ;
+
+let totalNumbers = 3;
+function combineAllNumbers() {
+
+}
+
+const 
+
+
+
+
+
+
+
+
+
+
+
 let x = 42; // initializing a variable
 
 /* this is

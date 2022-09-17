@@ -6,14 +6,47 @@ typeof [1,2] //object
 typeof {key:'value'} //object
 typeof x //undefined -primitive
 
-//let score = 0 //mutable
-//score = 5
+let score1 = 0 //mutable
+score1 = 5
+score1; //5
 
-/* Practice in Class Day 4 */
+const a = 1; a; //1 global
+{ const a = 3; a; } //3 local new assignment (two different /a/ variables)
+a; //1 global
+
+let b7 = 2; //global
+{ b7 = 4; b7; } //4 local reassignment
+b7; //4
+
+const c = 1; c; //1 global
+{ c = 3; c; } // ERROR -  reassignment of const invalid
+c; //1 global
+
+{ d = 3; d; } // global from block [without let or const]
+d; // 3 accessible because it is global
+d = 5; d; //5 mutable
+
+{let e=7; const h=8;} //local scope
+e; h;// unaccessible
+
+// Direct assignment - primitive values
+const a2 = 1;
+let b4 = a2; // a = 1, b = 1
+b4 = 2; // a = 1, b = 2
+
+// Reference - non-primitive values assignment
+const k = { value: 1 };
+let t = k; // k.value = 1, t.value = 1
+t.value = 2; // k.value = 2, t.value = 2
+
+k = {value: 2};
+
+
+/* Practice in Class Week 2 Day 2 */
 // 1. non-primitive data types can mutate
 const chatBot = {value: 'Alexa'}
-chatBot.value = 'Bot' //mutable
-
+chatBot.value = 'Bot' //mutable -  the value referenced by variable inside the object can change
+console.log(chatBot)
 //2. Immutable
 const botName = 'Siri' 
 botName = 'alexa' // TypeError: Assignment to constant variable.
